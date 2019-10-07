@@ -1,0 +1,15 @@
+each product in products
+    .product-container.is-shadow.is-round
+        .image-container(style='position: relative;')
+            a(href=`../product/${product._id}`)
+                img.product-image(src=`../../${product.photos_uploaded[0].photo_name}`)
+            .premium-tag
+                span Premium
+        .detail-container.is-white
+            .item-name.is-border-bottom.center
+                span #{product.product_name}
+            .item-price.center
+                span(style='padding: 0 4px') #{product.product_price}
+            p.upload_time
+                i.far.fa-clock
+                span.time #{product.date_created}

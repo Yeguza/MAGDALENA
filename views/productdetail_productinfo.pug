@@ -1,0 +1,28 @@
+#product-detail-container
+    p#product_name.vertical-center #{product.product_name}
+    p#date_uploaded
+        i#clock-icon.far.fa-clock
+        span.text Uploaded
+        span.server_time #{date_uploaded}
+    p#product_description #{product.product_description}
+    p#seller_name
+        span#seller_name_label Seller name :
+        span#name #{seller.seller_name}
+    p#seller_number
+        span#seller_number_label Seller Number :
+        span#number #{seller.phone_number}
+    p#product_price
+        span#price_label price :
+        span#price #{product.product_price}
+    #seller_location
+        span#location_icon
+            i.fas.fa-map-marker
+        span#location #{seller.seller_location}
+    #call_seller.center.vertical-center
+        a(href=`tel:${seller.seller_number}`)
+            span Call Seller
+            i.fas.fa-phone.contact-icon
+    #message_seller.center.vertical-center
+        a(href=`sms:${seller.seller_number}`)
+            span Message Seller
+            i.fas.fa-envelope.contact-icon

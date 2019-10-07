@@ -1,0 +1,33 @@
+#product-list-container(data-category=`${page_category}` data-total-products=`${total_product_count}`)
+    each product in products
+        .product-container.is-shadow.is-round
+            .image-container(style='position: relative;')
+                a(href=`../product/${product._id}`)
+                    img.product-image(src=`../../${product.photos_uploaded[0].photo_name}`)
+                .premium-tag
+                    span Premium
+            .detail-container.is-white
+                .item-name.is-border-bottom.center
+                    span #{product.product_name}
+                .item-price.center
+                    span(style='padding: 0 4px') #{product.product_price}
+                p.upload_time
+                    i.far.fa-clock
+                    span.time #{product.date_created}
+
+
+
+// status elements
+.page-load-status
+    .loader-ellips.infinite-scroll-request
+        span.loader-ellips__dot
+        span.loader-ellips__dot
+        span.loader-ellips__dot
+        span.loader-ellips__dot
+    p.infinite-scroll-last -- End of content --
+    p.infinite-scroll-error No more pages to load
+
+
+
+
+

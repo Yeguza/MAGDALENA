@@ -1,0 +1,75 @@
+form(action="/app/upload", method="POST", enctype="multipart/form-data")
+    #name-container.entry
+        label(for='seller_name')
+            span.info(style='margin-right: 5px;') Your name
+            span ∗
+        input#seller-name.is-shadow(type='text', name='seller_name', value=(undefined===form_data ? '' : form_data.seller_name))
+
+    #seller-number-container.entry
+        label(for='seller-number')
+            span.info(style='margin-right: 5px;') Your phone number
+            span &#8727;
+        input#seller-number.is-shadow(type='text' name='seller_phone_number')
+
+    #product-name-container.entry
+        label(for='product-name')
+            span.info(style='margin-right: 5px;') Product Name
+            span ∗
+        input#product-name.is-shadow(type='text', name='product_name', value=(undefined===form_data ? '' : form_data.product_name))
+    #description-container.entry
+        label(for='product-description')
+            span.info(style='margin-right: 5px;') Product Description
+            span ∗
+        textarea#product-description.is-shadow(name='product_description')
+        p.tip
+            span.important
+                span(style='color: #039BE5; margin-right: 5px;') Important!
+                |  Describe you product as factual as possible. Describe the condition of your product, it's size and much more.
+    #product-price-container.entry
+        label(for='product-price')
+            span.info Enter Price
+            span ∗
+        input#product_price.is-shadow(type='text', name='product_price', value=(undefined===form_data ? '' : form_data.product_price))
+        p.tip
+            span.important
+                span(style='color: #039BE5; margin-right: 5px') Important!
+                | Please set your price to help your customes buy.
+    #category-container.entry
+        label(for='product-category')
+            span.info(style='margin-right: 5px;') Choose Category
+            span ∗
+        select#categories.dropdowns(name="product_category")
+            option(value='hide') Choose Category
+            option(value='Cellphones & smartphones') Cellphones & Smartphones
+            option(value='Laptop & Notebooks') Laptop & Notebooks
+            option(value='Desktop & Components') Desktop & Components
+            option(value='Networking & Servers') Networking & Servers
+            option(value='Cameras & Drones') Cameras & Drones
+            option(value='Printers & Scanners') Printers & Scanners
+            option(value="Tv's & Components") Tv's & Components
+            option(value='Routers') Routers
+            option(value='PortableAudio & Headphones') Portable Audio & Headphones
+    #region-container.entry
+        label#region_label(for='region')
+            span.info(style='margin-right: 5px;') Choose Region
+            span(style='color: #2d343e;')
+                i.fas.fa-map-marker
+        select#regions.dropdowns(name="seller_location")
+            option(value='hide') Choose region
+            option(value='Mwanza') Mwanza
+            option(value='Dar es Salaam') Dar es Salaam
+        p.tip
+            span.important
+                span(style='color: #039BE5; margin-right: 5px;') For now we are supporting only two regions.
+    #upload-images-container.entry
+    .upload_my_images
+        input#file-input(name='photos', type='file', accept='image/*', multiple='')
+        label#file-input-button
+            i.fas.fa-camera
+            span(style='color: #212121;') Choose Images
+    p.tip
+        span.important
+            span(style='color: #039BE5; margin-right: 5px;') You can upload up to 8 images.
+    #post_button
+        button#upload_button(type='submit')  POST YOUR ADD
+

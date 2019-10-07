@@ -1,0 +1,132 @@
+.home-banner {
+	background-color: #C2F5FF;
+	color: #8A2B40;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.home-banner>h3, .home-banner>p {
+    color: #8A2B40;
+}
+
+.home-banner>h3 {
+    font-size: 1.3em;
+}
+
+.banner-info-text {
+    font-size: 1.0em;
+}
+
+
+/****************** category styles ****************/
+#home-category-container>h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5rem;
+    margin: 16px;
+}
+
+.category-row {
+    width: calc(100%- 32px);
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row nowrap;
+    margin: 10px 16px;
+}
+
+.category-row:last-child {
+    margin-top: 0;
+}
+
+.category-row:first-child {
+    margin-bottom: 0;
+}
+
+.category {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column nowrap;
+    min-width: 20px;
+    min-height: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    flex: 1 1 20px;
+    margin: 0 calc(1.2vw + 2px);
+}
+
+.category>.image {
+    width: 100%;
+    padding: 5px;
+    border: solid 2px #039BE5;
+    border-radius: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category>p {
+    font-size: calc(1vw + 0.6em);
+    margin-top: 10px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.image>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+}
+
+
+/*********************** home postadd banner *************/
+.home-postadd-banner {
+    background-color: #0f4a6c;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.home-postadd-banner>p {
+    color: whitesmoke;
+}
+
+.home-postadd-banner>h3 {
+    color: whitesmoke;
+    font-size: 1.3em;
+}
+
+.action-button {
+    font-size: 1.3em;
+}
+
+.action-button a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.action-button a:active {
+    color: #8A2B40;
+}
+
+#product-list-container {
+    margin-top: 30px;
+}
+
+@media (min-width: 40em) {
+   
+}
+
+
+@media (min-width: 62em) {
+    .category {
+        flex: 0 1 200px;
+    }
+}
+
+
+@media (min-width: 90em) {
+   
+}
+
+
+
+
+

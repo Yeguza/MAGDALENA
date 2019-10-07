@@ -1,0 +1,413 @@
+* { 
+     -webkit-box-sizing: border-box; 
+     box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+  padding-top: 50px;
+}
+
+/************************ header ******************************/
+.fa-bars, .fa-user {
+    color: white;
+}
+
+#header {
+  /* vendor prefixed css */
+    font-family: 'Lato', sans-serif;
+    background-color: #212121;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 50px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    transition: top 0.2s linear;
+}
+
+.nav-top {
+  position: -1000px;
+}
+
+.nav-down {
+  position: 0;
+}
+
+/*********************** logo styles ******************************/
+#logo {
+    font-size: 1.5em;
+}
+
+
+#ku {
+    color: #ff1744;
+}
+
+#me {
+    color: #00c853;
+    font-family: 'Righteous', cursive;
+}
+
+#no {
+    color: #ffff00;
+}
+
+#ga {
+    color: #039BE5;
+}
+
+
+/********************************* Side navigation ***************/
+#side-nav {
+  width: 0;
+  height: 100vh;
+  margin-top: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1200;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+  font-weight: light;
+  color: #2d343e;
+  transition: 0.1s linear;
+  overflow-x: hidden;
+}
+
+.top, .side-nav-category {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.side-nav-category {
+  flex: 1 1 50px;
+  margin: 0 20px;
+}
+
+.side-nav-category>a {
+  color: #212121;
+  text-decoration: none;
+}
+
+.side-nav-category>a:active {
+  color: #212121;
+  text-decoration: none;
+}
+
+.top {
+  flex: 0 0 50px;
+  background-color: #212121;
+  padding: 0 20px;
+  font-size: 1.3em;
+}
+
+.fa-window-close {
+  color: white;
+}
+
+.arrow {
+  font-size: 1em;
+}
+
+
+/****************************** Product info container *********************/
+#product-info-container {
+  margin: 20px;
+}
+
+.product-info {
+  min-height: auto;
+  padding: 20px 10px;
+  min-height: 30px;
+  color: #2d343e;
+}
+
+/************************************* Contact seller buttons ************************/
+.contact-button {
+  text-decoration: none;
+  color: #2d343e;
+  width: 40%;
+  padding: 10px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.0em;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 
+              0 1px 5px 0 rgba(0, 0, 0, 0.12), 
+              0 3px 1px -2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 
+              0 1px 5px 0 rgba(0, 0, 0, 0.12), 
+              0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+#call-seller {
+  margin-right: 20px;
+}
+
+#message-seller {
+  margin-left: 20px;
+  background-color: #039BE5;
+}
+
+#contact-seller-containers {
+  height: 70px;
+  margin: 20px;
+}
+
+.contact-icon {
+  font-size: 20px;
+}
+
+
+/****************** how to buy on kumenogatz *********************/
+
+.how-to-buy-container {
+  margin: 20px;
+  padding:0 20px;
+  margin-top: 50px;
+  border: rgba(34, 34, 34, 0.2) solid 1px;
+  position: relative;
+  border-radius: 5px;
+  background: whitesmoke;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.buy-tip {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border-bottom: rgba(34, 34, 34, 0.2) solid 1px;
+  padding: 10px 0;
+}
+
+.buy-tip>p, .buy-tip>span {
+  margin: 5px;
+}
+
+.buy-tip-last {
+  border-bottom: none;
+}
+
+.buy-tip-first {
+  padding-top: 30px;
+}
+
+.how-to-head {
+  position: absolute;
+  z-index: 10;
+  color: #039BE5;
+  background-color: #e6e6e6;
+  border: rgba(34, 34, 34, 0.2) solid 1px;
+  min-height: 30px;
+  top: -15px;
+  left: calc(43vw - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 1.1em;
+  padding: 0 10px;
+}
+
+.step {
+  color: #212121;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.buy-tip>span {
+  color: #039BE5;
+  font-size: 1.3em;
+  margin-top: 0;
+}
+
+.buy-tip>.info {
+  color: #666666;
+  text-align: center;
+  font-size: 0.8em;
+  margin-top: 0;
+}
+
+
+.safety-tips {
+  padding: 30px 20px 20px 20px;
+}
+
+
+.safety-tips>ul>li {
+  margin-left: 10px;
+  padding-bottom: 10px;
+  font-size: 0.9em;
+}
+
+.safety-tips>ul {
+  padding-left: 20px;
+  color: #666666;
+}
+
+
+/************************************ footer styles ***********************/
+#footer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-item {
+  margin: 10px;
+  font-size: 0.9em;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 140;
+}
+
+
+/********************************* social media *****************************/
+#social-media {
+  display: flex;
+  flex-flow: row nowrap; 
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon {
+  margin: 20px 10px;
+}
+
+
+/*********************** Created by ************************/
+#created-by {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #212121;
+  color: whitesmoke;
+  font-size: smaller;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: lighter;
+}
+
+.copyright {
+  color: whitesmoke;
+   margin-bottom: 20px;
+}
+
+
+/****************************** utility modules **************/
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical-center  {
+    display: flex;
+    align-items: center;
+}
+
+.is-shadow {
+     -webkit-box-shadow: 0 3px 4px 0 rgba(0,0,0,0.14),
+              0 3px 3px -2px rgba(0,0,0,0.12),
+               0 1px 8px 0 rgba(0,0,0,0.20);
+             box-shadow: 0 3px 4px 0 rgba(0,0,0,0.14),
+              0 3px 3px -2px rgba(0,0,0,0.12),
+               0 1px 8px 0 rgba(0,0,0,0.20);
+}
+
+.is-bg-color {
+     background-color: #e6e6e6;
+}
+
+.is-bordered-around {
+     border: rgba(34, 34, 34, 0.2) solid 1px;
+}
+
+.is-white {
+  background-color: rgb(255, 255, 255);
+}
+
+.is-round {
+  border-radius: 5px;
+}
+
+.is-gradient-1 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#1fa2ff), color-stop(#12d8fa), to(#a6ffcb));
+  background-image: -webkit-linear-gradient(left, #1fa2ff, #12d8fa, #a6ffcb);
+  background-image: -o-linear-gradient(left, #1fa2ff, #12d8fa, #a6ffcb);
+  background-image: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb);
+}
+
+.is-gradient-2 {
+  background-image: -webkit-gradient(linear, right top, left top, from(#00c6ff), to(#0072ff));
+  background-image: -webkit-linear-gradient(right, #00c6ff, #0072ff);
+  background-image: -o-linear-gradient(right, #00c6ff, #0072ff);
+  background-image: linear-gradient(to left, #00c6ff, #0072ff);
+}
+
+.is-border-bottom {
+  border-bottom: rgba(34, 34, 34, 0.2) solid 1px;
+}
+
+.is-border-top {
+  border-top: rgba(34, 34, 34, 0.2) solid 1px;
+}
+
+/*********************** banner styles **********************/
+.banner {
+	color: whitesmoke;
+	min-height: 70px;
+	margin-right: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.banner>h3 {
+	color: whitesmoke;
+	padding: 16px 16px 0 16px;
+}
+
+.banner>p {
+	padding: 16px;
+	color: whitesmoke;
+}
+
+
+/***************** whatsapp floating icon *********/
+.whatsapp-float {
+  position: fixed;
+  width: calc(50px);
+  height:  calc(50px);
+  bottom: 30px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 100%;
+    font-size: 25px;
+  -webkit-box-shadow: 2px 2px 3px #999;
+          box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
+
+@media (min-width: 301px) {
+    
+}
+
+
+
+
+

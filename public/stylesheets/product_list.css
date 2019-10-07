@@ -1,0 +1,258 @@
+* { margin: 0px; }
+
+
+.support {
+	padding: 10px;
+	margin: 10px;
+	font-weight: lighter;
+	font-size: 0.9rem;
+	min-height: 100px;
+}
+
+#container {
+	width: 100%;
+	display: flex;
+	justify-content: row nowrap;
+}
+
+#product-list-container {
+	flex: 1 1 80%;
+}
+
+#sidebar {
+	flex: 1 1 20%;
+	min-height: 100vh;
+	margin: 20px 10px 0 20px;
+	display: none;
+}
+
+.sidebar-category {
+	width: 100%;
+	height: 40px;
+	font-size: 0.9em;
+	font-family: 'Source Sans Pro', sans-serif;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+#sidebar-header {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1.3em;
+}
+
+.product-container {
+	font-family: 'Lato', sans;
+	min-height: 250px;
+	margin: 10px 20px;
+	display: flex;
+	flex-flow: column nowrap;
+	font-size: 1rem;
+}
+
+
+.product-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.image-container {
+	flex: 1 1 auto;
+	overflow: hidden;
+	margin: 5px;
+	border-radius: 0.5rem;
+	position: relative;
+}
+
+.detail-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-flow: column nowrap;
+	flex: 1 1 auto;
+	padding:0 20px;
+	color: #2d343e;
+	margin: 0 5px 5px 5px;
+	border-radius: 0.5em;
+	font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.item-name {
+	color: black;
+	text-align: center;
+}
+
+.item-price, .item-name {
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 1 auto;
+	        flex: 1 1 auto;
+	padding: 10px;
+}
+
+.item-price {
+	font-weight: bolder;
+	font-size: 0.9em;
+}
+
+.premium-tag {
+	position: absolute;
+	bottom: 10%;
+	left: 0;
+	min-width: auto;
+	padding: 2px 8px;
+	display: flex;
+	align-items: center;
+	text-transform: lowercase;
+	justify-content: center;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 0.9em;
+	border-top-right-radius: 1em;
+	border-bottom-right-radius: 1em;
+	color: #2d343e;
+	z-index: 10;
+	background-image: -webkit-gradient(linear, left top, right top, from(#1fa2ff), color-stop(#12d8fa), to(#a6ffcb));
+	background-image: -webkit-linear-gradient(left, #1fa2ff, #12d8fa, #a6ffcb);
+	background-image: -o-linear-gradient(left, #1fa2ff, #12d8fa, #a6ffcb);
+	background-image: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb);
+}
+
+.upload_time {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.8em;
+}
+
+.upload_time .time {
+	margin-left: 5px;
+}
+
+.fa-clock {
+	margin-right: 5px;
+}
+
+
+#footer {
+	margin: 10px;
+}
+
+
+#footer {
+	margin: 10px;
+}
+
+/********************** infinite scrolling styles ********/
+.page-load-status {
+    display: none; /* hidden by default */
+    padding-top: 20px;
+    border-top: 1px solid #DDD;
+    text-align: center;
+    color: #777;
+}
+
+
+.loader-ellips {
+  font-size: 20px; /* change size here */
+  position: relative;
+  width: 4em;
+  height: 1em;
+  margin: 10px auto;
+}
+
+.loader-ellips__dot {
+  display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 0.5em;
+  background: #555; /* change color here */
+  position: absolute;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+.loader-ellips__dot:nth-child(1),
+.loader-ellips__dot:nth-child(2) {
+  left: 0;
+}
+.loader-ellips__dot:nth-child(3) { left: 1.5em; }
+.loader-ellips__dot:nth-child(4) { left: 3em; }
+
+@keyframes reveal {
+  from { transform: scale(0.001); }
+  to { transform: scale(1); }
+}
+
+@keyframes slide {
+  to { transform: translateX(1.5em) }
+}
+
+.loader-ellips__dot:nth-child(1) {
+  animation-name: reveal;
+}
+
+.loader-ellips__dot:nth-child(2),
+.loader-ellips__dot:nth-child(3) {
+  animation-name: slide;
+}
+
+.loader-ellips__dot:nth-child(4) {
+  animation-name: reveal;
+  animation-direction: reverse;
+}
+
+.infinite-scroll-last {
+	margin: 20px 0;
+}
+
+
+/****************************** pagination **********************/
+
+.pagination {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: row nowrap;
+	        flex-flow: row nowrap;
+	margin: 20px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.pagination-item {
+	padding: 10px 16px;
+}
+
+.pagination-item:nth-child(2) {
+	background-color: #2d343e;
+	color: whitesmoke;
+	border-radius: 100%;
+}
+
+@media (min-width: 300px) {
+	#product-list-container {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(100px, 1fr));
+	}
+
+	.detail-container {
+		padding: 0;
+	}
+
+	#product-container {
+		padding: 10px 5px;
+		margin: 10px 5px;
+	}
+
+	.item-name {
+		padding: 5px;
+	}
+
+	.item-price {
+		padding: 5px;
+	}
+}

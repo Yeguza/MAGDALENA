@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset='utf-8')
+        title= title
+        meta(name='author', content='Baraka Ashery')
+        meta(name='keywords', content='')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        // --------------- styles ----------------------
+        link(href='../../style.css', rel='stylesheet', type='text/css')
+        link(href='../../flickity.css', rel='stylesheet', media='screen')
+        link(rel='stylesheet', type='text/css', href='../../product_detail.css')
+        link(rel='stylesheet', type='text/css', href='../../all.min.css')
+        link(rel='shortcut icon', href='../../favicon.ico', type='image/x-icon', sizes='16x16')
+        link(rel='apple-touch-icon-precomposed', href='../../apple-touch-icon-152x152-precomposed.png', type='image/png', sizes='152x152')
+        link(rel='apple-touch-icon-precomposed', href='../../apple-touch-icon-152x152-precomposed.png', type='image/png', sizes='120x120')
+        link(href='https://fonts.googleapis.com/css?family=Lato:900&display=swap', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Righteous&display=swap', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Caveat:700&display=swap', rel='stylesheet')
+        // scripts-
+        script(src='https://kit.fontawesome.com/75de682bb9.js')
+        //script(src='https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js')
+        script(src='../../flickity.pkgd.min.js')
+        script(src='../../all.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/af.js' integrity='sha256-I5ZXO8KcMnqNkrXU7baGig70nATYjNDnxxA2d40PcR8=' crossorigin='anonymous')
+
+    body 
+        include header
+        include productdetail_sidenav
+        include productdetail_carousel
+        include productdetail_productinfo
+
+        script(src='../../jquery-3.4.1.min.js')
+        script(src='../../sidenav.js')
+        script(src='../../header.js')
